@@ -145,21 +145,7 @@
   .image-container:hover img.default-img {
             opacity: 0;
         }
-  .image-container figure {
-    position: relative;
-}
-
-  .image-container figcaption {
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(0, 0, 0, 0.5); /* 半透明背景 */
-      color: white;
-      padding: 5px 10px;
-      border-radius: 5px;
-      z-index: 2; /* 確保在圖片上方 */
-  }
+  
   .bottomrow {
     margin-bottom: 36px;
   }
@@ -243,9 +229,8 @@
     <div class="col-md-12 twenty">    
       <div class="image-container">
        <figure>
-           <img class="default-img" src="11251506.jpg">
-            <img class="hover-img" src="results.png" width="700px"/>
-          <figcaption>其他人的"亂"和我的相似度</figcaption>
+            <img class="hover-img" src="11251506.jpg" width="700px"/>
+          <figcaption>hover效果呈現</figcaption>
         </figure>
       </div>
     </div>
