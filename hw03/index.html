@@ -122,15 +122,27 @@
   .toprow {
     margin-top: 36px;
   }
+  .image-container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+        }
+
+        .image-container img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.5s ease-in-out;
+        }
   .image-container img.hover-img {
             opacity: 0;
         }
 
-        .image-container:hover img.hover-img {
+  .image-container:hover img.hover-img {
             opacity: 1;
         }
 
-        .image-container:hover img.default-img {
+  .image-container:hover img.default-img {
             opacity: 0;
         }
   .bottomrow {
@@ -214,10 +226,12 @@
   </div>
   <div class="row hw12">
     <div class="col-md-12 twenty">    
-      <figure>
+      <div class="image-container">
+       <figure>
             <img class="hover-img" src="results.png" width="700px"/>
           <figcaption>其他人的"亂"和我的相似度</figcaption>
         </figure>
+      </div>
     </div>
   </div>
 
