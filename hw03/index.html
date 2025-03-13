@@ -145,6 +145,22 @@
   .image-container:hover img.default-img {
             opacity: 0;
         }
+  .image-container figcaption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;  /* 預設隱藏 */
+    transition: opacity 0.5s ease-in-out;
+   }
+
+  .image-container:hover figcaption {
+    opacity: 1; /* 滑鼠移入時顯示 */
+  }
   .bottomrow {
     margin-bottom: 36px;
   }
