@@ -40,7 +40,7 @@
 
             // 设置X轴比例尺
             var x = d3.scaleLinear()
-                .domain([0.6, 0.8]) // ssim
+                .domain([0, 0]) // ssim
                 .range([ 0, width ]);
             svg.append("g")
                 .attr("transform", "translate(0," + height + ")")
@@ -59,7 +59,7 @@
 
             // 设置Y轴比例尺
             var y = d3.scaleLinear()
-                .domain([0.38, 0.56]) // lpips
+                .domain([0, 0]) // lpips
                 .range([ height, 0]);
             svg.append("g")
                 .call(d3.axisLeft(y));
