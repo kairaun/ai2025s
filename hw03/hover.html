@@ -21,7 +21,7 @@
     </style>
 </head>
 <body>
-    <img src="word/11251506.jpg" height="150" width="150">
+    
     <script>
         // 设定SVG大小
         var margin = {top: 10, right: 30, bottom: 30, left: 60},
@@ -90,11 +90,21 @@
                   .attr("cy", function (d) { return y(d.LPIPS); } )
                   .attr("r", 6)
                   .style("fill", "#69b3a2")
-
-            // 创建工具提示
-            var tooltip = d3.select("body").append("div")
-                .attr("id", "tooltip")
-                .style("opacity", 0);
+            svg.append('g')
+                .selectAll("text")
+                .data(filteredData)
+                .enter()
+                .append("text")
+                  .attr("x", function (d) { return x(d.SSIM) + 8; }) // 右側偏移
+                  .attr("y", function (d) { return y(d.LPIPS) - 8; }) // 上方偏移
+                  .text(function(d) { return d.Student; }) // 顯示學號
+                  .attr("font-size", "12px")
+                  .attr("fill", "black")
+                  .style("text-anchor", "start"); // 確保標籤從左側開始
+                        // 创建工具提示
+                        var tooltip = d3.select("body").append("div")
+                            .attr("id", "tooltip")
+                            .style("opacity", 0);
 
 
             svg.selectAll("circle")
